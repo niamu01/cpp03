@@ -1,6 +1,20 @@
-NAME = ClapTrap
-CFLAGS = -Wall -Wextra -Werror
-SRCS = main.cpp ScavTrap.cpp
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/04/01 19:15:53 by yeju              #+#    #+#              #
+#    Updated: 2022/04/01 20:15:34 by yeju             ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = ScavTrap
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror
+C98 = -std=c++98
+SRCS = main.cpp ScavTrap.cpp ClapTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all : $(NAME)
@@ -13,8 +27,8 @@ fclean : clean
 
 re : fclean all
 
-$(NAME) : $(OBJS)
-	clang++ $(CFLAGS) -c $(SRCS)
-	clang++ $(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME) : $(SRCS)
+	$(CXX) $(CXXFLAGS) $(C98) -c $(SRCS)
+	$(CXX) $(CXXFLAGS) $(C98) $(OBJS) -o $(NAME)
 
 .PHONY : all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 19:15:49 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/01 19:15:49 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/01 19:28:03 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ public:
 	void	beRepaired(unsigned int amount);
 	
 	unsigned int	getDamage(void) const;
-private:
+protected:
 	std::string		_name;
 	unsigned int	_hit;
 	unsigned int	_energy;
