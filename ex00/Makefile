@@ -1,5 +1,7 @@
 NAME = ClapTrap
-CFLAGS = -Wall -Wextra -Werror
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror
+C98 = -std=c++98
 SRCS = main.cpp ClapTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 
@@ -13,8 +15,8 @@ fclean : clean
 
 re : fclean all
 
-$(NAME) : $(OBJS)
-	clang++ $(CFLAGS) -c $(SRCS)
-	clang++ $(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME) : $(SRCS)
+	$(CXX) $(CXXFLAGS) $(C98) -c $(SRCS)
+	$(CXX) $(CXXFLAGS) $(C98) $(OBJS) -o $(NAME)
 
 .PHONY : all clean fclean re

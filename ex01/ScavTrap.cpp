@@ -11,7 +11,7 @@ ScavTrap::ScavTrap(): ClapTrap(), _guard_mode(false)
 }
 
 
-ScavTrap::ScavTrap(const ScavTrap& src): ClapTrap(src), _guard_mode(src._guard_mode)
+ScavTrap::ScavTrap(const ScavTrap& rhs): ClapTrap(rhs), _guard_mode(rhs._guard_mode)
 {
 	std::cout << GREEN;
 	std::cout << "ScavTrap copy constructor (" << _name << ") called" << std::endl;
@@ -30,15 +30,15 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name), _guard_mode(false)
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << RED;
+	std::cout << PURPLE;
 	std::cout << "ScavTrap destructor (" << _name << ") called" << std::endl;
 	std::cout << RESET;
 }
 
-ScavTrap&	ScavTrap::operator=(ScavTrap const& src)
+ScavTrap&	ScavTrap::operator=(ScavTrap const& rhs)
 {
-	ClapTrap::operator=(src);
-	_guard_mode = src._guard_mode;
+	ClapTrap::operator=(rhs);
+	_guard_mode = rhs._guard_mode;
 	std::cout << CYAN;
 	std::cout << "ScapTrap operator = (" << _name << ") called" << std::endl;
 	std::cout << RESET;

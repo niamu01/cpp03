@@ -9,7 +9,7 @@ DiamondTrap::DiamondTrap(): _name(ClapTrap::_name)
 	std::cout << RESET;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& src): ClapTrap(src), ScavTrap(src), FragTrap(src), _name(src._name)
+DiamondTrap::DiamondTrap(const DiamondTrap& rhs): ClapTrap(rhs), ScavTrap(rhs), FragTrap(rhs), _name(rhs._name)
 {
 	std::cout << GREEN;
 	std::cout << "DiamondTrap copy constructor (" << _name << ") called" << std::endl;
@@ -26,15 +26,15 @@ DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), ScavT
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << RED;
+	std::cout << PURPLE;
 	std::cout << "DiamondTrap destructor (" << _name << ") called" << std::endl;
 	std::cout << RESET;
 }
 
-DiamondTrap&	DiamondTrap::operator=(DiamondTrap const& src)
+DiamondTrap&	DiamondTrap::operator=(DiamondTrap const& rhs)
 {
-	ScavTrap::operator=(src);
-	_name = src._name;
+	ScavTrap::operator=(rhs);
+	_name = rhs._name;
 	std::cout << CYAN;
 	std::cout << "DiamondTrap operator = (" << _name << ") called" << std::endl;
 	std::cout << RESET;
