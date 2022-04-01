@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 20:26:01 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/01 21:09:36 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/01 21:09:28 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ ScavTrap::ScavTrap(): ClapTrap(), _guard_mode(false) {
 	std::cout << "ScavTrap default constuctor (" << _name << ") called" << std::endl;
 	std::cout << RESET;
 }
-
 
 ScavTrap::ScavTrap(const ScavTrap& rhs): ClapTrap(rhs), _guard_mode(rhs._guard_mode) {
 	std::cout << YELLOW;
@@ -43,7 +42,7 @@ ScavTrap::~ScavTrap() {
 	std::cout << RESET;
 }
 
-ScavTrap&	ScavTrap::operator=(ScavTrap const& rhs) {
+ScavTrap &	ScavTrap::operator=(ScavTrap const& rhs) {
 	ClapTrap::operator=(rhs);
 	_guard_mode = rhs._guard_mode;
 	std::cout << YELLOW;
