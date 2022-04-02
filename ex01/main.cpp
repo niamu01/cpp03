@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 20:25:58 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/01 20:35:32 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 16:53:10 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	main(void)
 	a.beRepaired(10);
 	
 	std::cout << std::endl;
-	b.guardGuate();
+	b.guardGate();
 	
 	std::cout << std::endl;
 	return (0);
